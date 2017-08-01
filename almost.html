@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tha gamiso ton Map</title>
+  <style>
+  html, body {
+    width: 100%;
+    height: 100%;
+  }
+ .container{
+   width: 100%;
+   height: 100%;
+   display: flex;
+ }
+ .sidebar{
+   width: 20%;
+ }
+ #map {
+   width: 80%;
+ }
+  </style>
+</head>
+<body>
+  <div class ="container">
+    <div class="sidebar">
+     <input  placeholder="Autocomplete from the list" data-bind="textInput: filter" />
+
+    <ul id="menu" data-bind="foreach: filteredItems">
+      <li data-bind="text: title,click: $parent.setLoc"></li>
+        </ul>
+       </div>
+    <div id="map">
+
+    </div>
+  </div>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhBhCpY58VPkKqX96p2JxfQxL12A-DkZg&callback=initMap"
+  async defer></script>
+  <script src="knockout-3.4.2.js"></script>
+  <script src="jquery.min.js"></script>
+  <script src="app6G.js"></script>
+
+</body>
+</html>
