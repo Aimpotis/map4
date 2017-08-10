@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body, main {
+  width: 100vw;
+  height: 100vh;
+}
+
+
+
+nav {
+  width: 40vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 1000;
+  -webkit-transform: translate(-33vw, 0);
+  transform: translate(-33vw, 0);
+  transition: transform 0.3s ease;
+  background: rgba(42, 149, 197, 0.5);
+  display: flex;
+ }
+
+ nav input {
+       margin-top: 2vh;
+ }
+
+nav.open {
+  z-index: 1000;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+      }
+
+
+      #toggleMenu {
+        width: 7vw;
+        height: 100vh;
+        background-color: white;
+      }
+#options{
+  width: 33vw;
+  height: 100vh;
+}
+.statue {
+  width: 20vw;
+  margin: 1vh auto;
+  display: block;
+}
+.picTop{
+  width: 33vw;
+}
+.title {
+  max-width: 20vw;
+  text-align: center;
+  margin: 1vh auto;
+  font-size: 1.4vw;
+}
+
+  @media (min-width: 701px) {
+     nav {
+       width: 20vw;
+     position:absolute;
+     -webkit-transform: translate(0, 0);
+     transform: translate(0, 0);
+         }
+         body {
+          display: -webkit-flex;
+          display: flex;
+          -webkit-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+        }
+         main {
+          width: auto;
+          flex-grow: 1;
+         }
+         .statue {
+           width: 17vw;
+         }
+
+        #options{
+          width: 17vw;
+        }
+        #toggleMenu{
+          width: 3vw;
+        }
+       }
