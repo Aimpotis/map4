@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Places to visit in NY</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <script src="https://use.fontawesome.com/b6ffeba6df.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js">
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+  <nav class="mainNav">
+    <div class="options">
+      <div class="title">
+        <h1 class="mtitle">Places to visit in NY</h1>
+      </div>
+      <picture class="picTop">
+        <source media="(max-width: 700px)" srcset="images/small-liberty2.svg">
+          <source media="(max-width: 1024px)" srcset="images/medium-liberty2.svg">
+            <img class="statue" src="images/large-liberty2.svg" alt="Statue of Liberty Attribution-shareicon.net/">
+          </picture>
+          <div class="list">
+            <input class="type" placeholder="Type" data-bind="textInput: go" />
+
+            <ul id="menu" data-bind="foreach: filteredList">
+              <li data-bind="text: title,click: $parent.push"></li>
+            </ul>
+          </div>
+        </div>
+        <div class="slider" data-bind="click: open">
+          <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+        </div>
+      </nav>
+      <main id="map">
+
+      </main>
+
+      <script async defer
+      src=
+      "https://maps.googleapis.com/maps/api/js?key=AIzaSyCXsbnB0vDYsJb7EcIugJUT3SCSDdCyo-A&libraries=places&callback=googleSuccess" onerror="googleError()">
+      </script>
+
+
+
+      <script src="script/app6K.js"></script>
+
+    </body>
+    </html>
